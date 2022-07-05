@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            @import url(//fonts.googleapis.com/css?family=Vibur);
+            header{
+                display: flex;
+                background: #112;
+                padding: 2vw;
+            margin: 0;
+            }
+            html,body{
+            margin: 0;
+            padding: 0;
+            height:100%
+            }
+            .title {
+            text-align: center;
+            margin: auto;
+            }
+
+            .title a :visited{
+                color: #fff;
+            }
+
+            .title a{
+                color: #fff;
+            }
+
+            .title b{
+            font: 400 30px "Vibur";
+            color: #fee;
+            text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+            }
+            .title b span{
+            animation: blink linear infinite 2s;
+            }
+            .title b span:nth-of-type(2){
+            animation: blink linear infinite 3s;
+            }
+            @keyframes blink {
+                78% {
+                    color: inherit;
+                    text-shadow: inherit;
+                }
+                79%{
+                    color: #333;
+                }
+                80% {
+                    
+                    text-shadow: none;
+                }
+                81% {
+                    color: inherit;
+                    text-shadow: inherit;
+                }
+                82% {
+                    color: #333;
+                    text-shadow: none;
+                }
+                83% {
+                    color: inherit;
+                    text-shadow: inherit;
+                }
+                92% {
+                    color: #333;
+                    text-shadow: none;
+                }
+                92.5% {
+                    color: inherit;
+                    text-shadow: inherit;
+                }
+            }
+
+            .btns{
+                width: 30vw;
+                display: inline-flex;
+                justify-content: space-between;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="btns"><a href="">Game</a><a href="">Web_page</a></div>
+            <div class="title"><b>C<span>O</span>MV<span>H</span>ome pa<span>g</span>e</b></div>
+            <div class="btns"><a href="">Music</a><a href="">Video</a></div>
+        </header>
+    </body>
+</html>

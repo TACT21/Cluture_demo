@@ -1,0 +1,11 @@
+{
+    "name": "数字割りゲーム",
+    "short_name": "SWG",
+    "icons": [{
+        "src": "Suuziwari.svg",
+        "sizes": "375x375",
+        "type": "image/svg"
+      }],
+    "start_url": "index.html",
+    "display": "standalone"
+  }

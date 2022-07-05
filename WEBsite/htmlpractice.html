@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="image/icon.png" sizes="32×32">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<meta charset="UTF-8">
+<title>HTMLの基本を学ぼう！| UG's Memo</title>
+</head>
+<body width="100">
+<a href="#top" id="topbutton" class="fas fa-angle-double-up" onClick="gototop()"></a>
+<header>
+<div class="toptitle"><a href="#top" class="colorblack"><b>UG's Memo</b></a></div>
+<nav>
+<ul class="stylen dis">
+<!--
+<li class="dis disp"><a><b>about</b></a></li>
+<li class="dis disp"><a><b>work</b></a></li>
+-->
+</ul>
+</nav>
+</header>
+<div id="sotonowakusen">
+<div id="utigawanotyousei">
+<div id="itibannsaisyo">
+<div id="bigtitle">
+<h1><b>HTMLの基本を学ぼう!</b></h1><br>
+</div>
+</div>
+<div id="title1">
+<div id="title2">
+<h2>目次</h2>
+</div>
+</div>
+<ul>
+<li><a href="#htmltoha" style="text-decoration:none;" id="linksitei" onclick="scroll-start('menu01')"><p id="linkyou">HTMLとは?</p></a></li>
+<li><a href="#htmlkihonn" style="text-decoration:none;" id="linksitei"><p id="linkyou">HTMLの構文</p></a></li>
+<li><a href="#htmljissenn" style="text-decoration:none;" id="linksitei"><p id="linkyou">実践~HTMLを使ってみよう~</p></a></li>
+<li><a href="#htmlowari" style="text-decoration:none;" id="linksitei"><p id="linkyou">まとめ</p></a></li>
+</ul>
+<div id="mienaiwakusen">
+<p>
+この記事は私がCSSを始めるときに、<br>サイトのようなものを作りながらCSSを覚えようと思い、作り始めたものです。<br>
+HTMLの構文の仕方をできるだけ細かく説明しているので、どうぞご覧ください。
+</p>
+</div>
+<a class="anchor" id="menu01"></a>
+<div id="title1">
+<div id="title2">
+<h2>HTMLとは?</h2>
+</div>
+</div>
+<div id="mienaiwakusen">
+<p>
+WEBページの文字や画像などを表示するための言語で、<br>
+殆どのWEBサイトはこのHTMLを土台に作られています。<br>
+このページもHTMLで作られています。<br>
+しかし、HTMLはあくまで土台で、HTMLだけでサイトを作ろうとすると、<br>
+白黒で面白みのないものになってしまいます。<br>
+</p>
+<a href="image/h.setumei1.jpg" target="_blank" id="syasinn"><img src="image/h.setumei1.jpg" width="450" height="253" border="3"></a>
+<p>
+そこで使うのがCSSです。<br>
+CSSはHTMLと同じプログラミング言語で、ページの背景色やレイアウトそのものを変えることができます。<br>
+</p>
+<a href="image/h.setumei2.jpg" target="_blank" id="syasinn"><img src="image/h.setumei2.jpg" width="450" height="253" border="3"></a>
+</div><!--mienaiwakusen-->
+<a class="anchor" id="htmlkihonn"></a>
+<div id="title1">
+<div id="title2">
+<h2>HTMLの構文</h2>
+</div>
+</div>
+<div id="mienaiwakusen">
+<p>
+HTMLの構文はこのような感じになっています。
+</p>
+<pre><div id="code">&lt;!DOCTYPE html&gt;
+<span id="aka">&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;</span>HTMLを書いてみよう<span id="aka">&lt;/title&gt;
+  &lt;meta </span><span id="midori">charset</span>=<span id="kiiro">"UTF-8"</span><span id="aka">&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;</span>HTMLを書いてみた<span id="aka">&lt;/h1&gt;
+  &lt;p&gt;</span>これがHTMLだ!<span id="aka">&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</span>
+</div></pre>
+<p>
+見た目は複雑そうですが、中身は結構簡単なのでサクッと覚えていきましょう。<br>
+HTMLは、<b>要素名</b>（文字や数字でできた塊）を&lt; &gt;で囲んで「タグ」を作り、文章を構成しています。
+</p>
+<a href="image/h.setumei3.jpg" target="_blank" id="syasinn"><img src="image/h.setumei3.jpg" width="450" height="253" border="3"></a>
+<p>
+&lt;h1&gt;のように要素名から始まるタグは<b>開始タグ</b>と呼ばれ、<br>
+&lt;/h1&gt;のように「 / (スラッシュ)」から始まり要素名がくっつくタグは<b>終了タグ</b>と呼ばれます。<br>
+開始タグと終了タグで囲まれたところを<b>内容</b>といい、<br>
+開始タグ、内容、終了タグを含めた全体を<b>要素</b>といいます。<br>
+内容には要素それぞれの効果が適用されます。<br>
+この場合h1タグには見出しの効果があるので、<br>
+内容の部分（HTMLを始めよう）に見出しの効果が適用されます。
+</p>
+</div>
+<div id="minititle1">
+<div id="minititle2">
+<h2 id="daihyou">代表的なタグ</h2>
+</div>
+</div>
+<div id="mienaiwakusen">
+<p>
+HTMLには約100種類のタグがあります。ただ、全てのタグをそれぞれ説明すると日が暮れてしまうので、<br>
+今回はその中でも代表的なものをいくつか説明していきたいと思います。
+</p>
+<h3>&lt;a&gt; ~リンク~</h3>
+<p>
+aタグはリンクを貼るときやページ内をジャンプする時に使います。<br>
+非常に汎用性が高いです。<br>
+hrefという<b>属性名</b>（後で説明します）は結構使うので覚えておいたほうがいいです。<br>
+例：<br>
+<a href="#htmlkihonn">ここをクリック</a>
+</p>
+<pre>
+<div id="code"><span id="aka">&lt;a</span> <span id="midori">href</span>=<span id="kiiro">"◯◯"</span><span id="aka">&gt;</span>ここをクリック<span id="aka">&lt;/a&gt;</span><span id="haiiro">&lt;!--〇〇の部分にリンクを入れるとそこに飛びます。--&gt;</span>
+</div></pre>
+<h3>&lt;p&gt; ~文章・段落~</h3>
+<p>
+pタグは文章を書くときや段落を指定する時に使います。<br>
+例：<br>
+これは例文です。
+</p>
+<pre>
+<div id="code"><span id="aka">&lt;p&gt;</span>これは例文です。<span id="aka">&lt;/p&gt;</span><span id="haiiro">&lt;!--〇〇の部分が文章として反映されます。--&gt;</span>
+</div></pre>
+<h3>&lt;br&gt; ~文章の改行~</h3>
+<p>
+brタグは文章を改行する時に使います。<br>
+なくてもpタグを使えば文章は書けますが、個人的にはbrタグの方が好みです。<br>
+brタグは<b>終了タグがない</b>ので注意してください。<br>
+例：<br>
+これは<br>
+例文です。
+</p>
+<pre>
+<div id="code"><span id="aka">&lt;p&gt;</span>
+これは<span id="aka">&lt;br&gt;</span>
+例文です。
+<span id="aka">&lt;/p&gt;</span>
+<span id="haiiro">&lt;!--「これは」の後に&lt;br&gt;を使っているので、「これは」の後ろが改行されます。--&gt;</span>
+</div></pre></div>
+<div id="mienaiwakusen">
+<h3>&lt;h1&gt;〜&lt;h6&gt; ~見出し~</h3>
+<p>
+h1~h6タグは見出しを作る時に使います。<br>
+h◯の中の数が大きくなればなるほど、見出しのサイズは小さくなります。<br>
+非常に使いやすいタグです。<br>
+例：
+</p></div>
+<div id="mienaiwakusen2">
+<h1>これは例文です。</h1>
+<h2>これは例文です。</h2>
+<h3>これは例文です。</h3>
+<h4>これは例文です。</h4>
+<h5>これは例文です。</h5>
+<h6>これは例文です。</h6></div>
+<div id="mienaiwakusen"><pre>
+<div id="code"><span id="aka">&lt;h1&gt;</span>これは例文です。<span id="aka">&lt;/h1&gt;</span>
+<span id="aka">&lt;h2&gt;</span>これは例文です。<span id="aka">&lt;/h2&gt;</span>
+<span id="aka">&lt;h3&gt;</span>これは例文です。<span id="aka">&lt;/h3&gt;</span>
+<span id="aka">&lt;h4&gt;</span>これは例文です。<span id="aka">&lt;/h4&gt;</span>
+<span id="aka">&lt;h5&gt;</span>これは例文です。<span id="aka">&lt;/h5&gt;</span>
+<span id="aka">&lt;h6&gt;</span>これは例文です。<span id="aka">&lt;/h6&gt;</span>
+<span id="haiiro">&lt;!--h1~h6タグは自動で改行されるので、注意してください。--&gt;</span>
+</div></pre>
+<h3>&lt;img&gt; ~写真の貼り付け~</h3>
+<p>
+imgタグは写真を貼り付ける時に使います。<br>
+aタグで前後を囲むことで写真をクリックしたら〇〇へ飛ぶ…なんてこともできます。<br>
+今回は私が適当に作ったChromeのマークの写真を貼ります。<br>
+例：<br>
+<img src="image/h.setumei4.jpg" width="150" height="150">
+</p>
+<pre>
+<div id="code"><span id="aka">&lt;img </span><span id="midori">src</span>=<span id=kiiro>"〇〇" </span><span id="midori">width</span>=<span id=kiiro>"150" </span><span id="midori">height</span>=<span id=kiiro>"150"</span><span id="aka">&gt;</span>
+<span id="haiiro">&lt;!--〇〇の中に写真のリンクを貼り付けることで写真が表示されます。widthは横幅、heightは高さを表しています。--&gt;</span>
+</div></pre>
+<h3>&lt;b&gt;,&lt;u&gt;,&lt;i&gt; ~文字の装飾あれこれ~</h3>
+<p>
+b,u,iタグは文字の装飾をしたい時に使います。<br>
+それぞれの役割については以下の通りです。<br>
+bタグ…文字を太字にする<br>
+uタグ…文字に下線を引く<br>
+iタグ…文字を斜体にする<br>
+例：<br>
+<b>太字</b><br>
+<u>下線</u><br>
+<i>斜体</i>
+</p>
+<pre>
+<div id="code"><span id="aka">&lt;p&gt;</span>
+ <span id="aka">&lt;b&gt;</span>太字<span id="aka">&lt;/b&gt;&lt;br&gt;</span>
+ <span id="aka">&lt;u&gt;</span>下線<span id="aka">&lt;/u&gt;&lt;br&gt;</span>
+ <span id="aka">&lt;i&gt;</span>斜体<span id="aka">&lt;/i&gt;</span>
+<span id="aka">&lt;/p&gt;</span>
+<span id="haiiro">&lt;!--他にも文字を装飾する方法はたくさんあります。--&gt;</span>
+</div></pre>
+<h3>&lt;table&gt;,&lt;tr&gt;,&lt;th&gt;,&lt;td&gt; ~表~</h3>
+<p>
+tableタグは表を作りたい時に使います。<br>
+<b>border</b>属性を指定すると、枠線をつけることができます。<br>
+thタグは見出し的なもので、太字で表示されます。<br>
+tdタグは内容的なもので、普通に表示されます。<br>
+例：
+</p></div>
+<div id="mienaiwakusen2">
+<table border="1">
+<tr>
+<th>HTML</th>
+<td>基盤</td>
+</tr>
+<tr>
+<th>CSS</th>
+<td>装飾</td>
+</tr>
+</table>
+</div>
+<div id="mienaiwakusen">
+<p>
+図に表すとこんな構造になっています。<br>
+<a href="image/h.setumei6.jpg" target="_blank"><img src="image/h.setumei6.jpg" width="450" height="253"></a><br>
+「tableという大きなお弁当の中に、trという仕切りがあって、thという主食とtdという副菜が入っている」<br>
+という認識で良いと思います。
+</p>
+<pre>
+<div id="code"><span id="aka">&lt;table</span><span id="midori"> border</span>=<span id="kiiro">"1"</span><span id="aka">&gt;
+ &lt;tr&gt;
+  &lt;th&gt;</span>HTML<span id="aka">&lt;/th&gt;
+  &lt;td&gt;</span>基盤<span id="aka">&lt;/td&gt;
+ &lt;/tr&gt;
+ &lt;tr&gt;
+  &lt;th&gt;</span>CSS<span id="aka">&lt;/th&gt;
+  &lt;td&gt;</span>装飾<span id="aka">&lt;/td&gt;
+ &lt;/tr&gt;
+&lt;/table&gt;</span>
+</div></pre>
+<p>
+ちなみに、CSSで飾り付けをすると下のように、枠線や背景色を変えることができます。<br>
+シンプルでかっこいいですね。
+</p></div><div id="mienaiwakusen2">
+<table border="1" id="sousyoku">
+<tr>
+<th id="sousyoku">HTML</th>
+<td id="sousyoku">基盤</td>
+</tr>
+<tr>
+<th id="sousyoku">CSS</th>
+<td id="sousyoku">装飾</td>
+</tr>
+</table></div>
+<div id="mienaiwakusen">
+<h3>&lt;!----&gt; ~コメント~</h3>
+<p>
+コメントタグは、「表示はさせたくないけど、ちょっとだけ記述しておきたい」という時に使います。<br>
+使い方はとっても簡単です。私もよく使っています。<br>
+例：<br>
+これは例文です。<!--表からは見えない-->
+</p>
+<pre>
+<div id="code"><span id="aka">&lt;p&gt;</span>
+これは例文です。
+<span id="aka">&lt;/p&gt;</span>
+<span id="haiiro">&lt;!--表からは見えない--&gt;</span>
+</div></pre>
+<p>
+この場合、「表からは見えない」の部分が非表示になります。<br>
+Javascriptの場合は「//」、CSSの場合は「/**/」など、<br>
+使用する言語によってコメントの仕方が異なるので気をつけてください。
+</p>
+<h3>&lt;!DOCTYPE html&gt;</h3>
+<p>
+このタグはHTML5という言語で書かれていることを示すためのタグです。<br>
+これがないとWebページがしっかり表示されないことがあるので注意です。<br>
+このタグは<b>終了タグがない</b>ので注意してください。
+</p>
+<h3>&lt;html&gt;</h3>
+<p>
+このタグは、<br>
+「ここからここまでがhtmlで書かれているよ」<br>
+ということを示すためのタグです。
+</p>
+<h3>&lt;head&gt;,&lt;body&gt;</h3>
+<p>
+headタグは、Webページの名前や文字の種類の情報を記述するためのタグで、<br>
+bodyタグは、実際にWebページに表示する情報を記述するためのタグです。<br>
+図に表すとこんな感じです。<br>
+<a href="image/h.setumei8.jpg" target="_blank"><img src="image/h.setumei8.jpg" width="450" height="253"></a><br>
+</p>
+<h3>&lt;title&gt;</h3>
+<p>
+このタグは、Webページのタイトル部分の名前の情報を記述するためのタグです。<br>
+結構大切なので覚えておいてください。<br>
+<a href="image/h.setumei9.jpg" target="_blank" id="syasinn"><img src="image/h.setumei9.jpg" width="450" height="253" border="3"></a>
+</p>
+<h3>&lt;meta&gt;</h3>
+<p>
+このタグは、Webサイトの文字の種類の情報を記述するためのタグです。<br>
+このタグを記述しないと、文字関係に色々異常が起きてしまうことがあります。<br>
+フォントとはまた違うようで、文字化けを防いだりするときに使います。<br>
+<a href="image/h.setumei10.jpg" target="_blank" id="syasinn"><img src="image/h.setumei10.jpg" width="450" height="253" border="3"></a>
+</p>
+</div><!--mienaiwakusen-->
+<div id="minititle1">
+<div id="minititle2">
+<h2>属性名と属性値</h2>
+</div>
+</div>
+<div id="mienaiwakusen">
+<p>
+タグの説明時にちらほら出てきた<b>属性名</b>や<b>属性値</b>について絵を用いて簡単に説明します。<br>
+<a href="image/h.setumei7.jpg" target="_blank" id="syasinn"><img src="image/h.setumei7.jpg" width="450" height="253" border="3"></a><br>
+上のようになっています。<br>
+要素のうち、どの設定にするかが<b>属性名</b>で、どういう感じで設定するかが<b>属性値</b>です。<br>
+これは結構大事なので、覚えておいてください。
+</p>
+</div>
+<a class="anchor" id="htmljissenn"></a>
+<div id="title1">
+<div id="title2">
+<h2>実践~HTMLを使ってみよう~</h2>
+</div>
+</div>
+<div id="mienaiwakusen">
+<p>
+これまでの内容を踏まえて、実際に簡単なコードを書いて遊んでみましょう。<br>
+と、その前にHTMLをブラウザで表示させる方法について知っておきましょう。
+</p></div>
+<div id="minititle1">
+<div id="minititle2">
+<h2>HTMLをブラウザで表示させる方法</h2>
+</div>
+</div>
+<div id="mienaiwakusen">
+<p>
+HTMLをブラウザで表示させるには、
+</p>
+<ul>
+<li>テキストエディター（ここでは <b>Text</b> を使います）</li>
+<li>ブラウザ（ここでは <b>Google Chrome</b> を使います）</li>
+</ul>
+<p>
+この2つが必須となります。<br>
+（余談ですが「Text」というアプリはGoogleの拡張機能でダウンロードすることができます。）
+</p>
+<h3>テキストエディターを開く</h3>
+<p>
+<a href="image/h.setumei11.jpg" target="_blank" id="syasinn"><img src="image/h.setumei11.jpg" width="450" height="253" border="3"></a><br>
+Textの場合、開くと「untitled 1」というファイルが開かれ、すぐ書けるようになっています。
+</p>
+<h3>とりあえず何か書いてみる</h3>
+<p>
+以下のコードをコピーして、テキストエディターに貼り付けてみましょう。
+</p>
+<pre>
+<div id="code">&lt;!DOCTYPE html&gt;
+<span id="aka">&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;</span>HTMLを書いてみよう<span id="aka">&lt;/title&gt;
+  &lt;meta </span><span id="midori">charset</span>=<span id="kiiro">"UTF-8"</span><span id="aka">&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+  &lt;h1&gt;</span>HTMLを書いてみた<span id="aka">&lt;/h1&gt;
+  &lt;p&gt;</span>これがHTMLだ!<span id="aka">&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;</span>
+</div></pre>
+<p>
+貼り付けたら、好きなファイルに<b>名前をつけて保存</b>しましょう。<br>
+HTMLファイルとして保存したいので、ファイル名の終わりに「.html」をつけておきます。
+</p>
+<h3>ブラウザで表示する</h3>
+<p>
+ファイルを開き、先程保存したファイルをドラッグしてブラウザにドロップします。
+<a href="image/h.setumei12.jpg" target="_blank" id="syasinn"><img src="image/h.setumei12.jpg" width="450" height="253" border="3"></a><br>
+すると下のように書いた内容が表示されます。<br>
+<a href="image/h.setumei13.png" target="_blank" id="syasinn"><img src="image/h.setumei13.png" width="450" height="253" border="3"></a>
+</p>
+</div>
+<a class="anchor" id="htmlowari"></a>
+<div id="title1">
+<div id="title2">
+<h2>まとめ</h2>
+</div>
+</div>
+<div id="mienaiwakusen">
+<ul>
+<li>HTMLは、要素名（文字や数字でできた塊）を&lt; &gt;で囲んで「タグ」を作り、文章を構成している。</li>
+<li>aタグを使うことでリンクを貼り、他のページやページ内のある場所にジャンプすることができる。</li>
+<li>pタグを使うことで文章を書くことができる。</li>
+<li>brタグで文章を改行することができる。</li>
+<li>h1~6タグで見出しを、b,u,iタグで文章のデコレーションをすることができる。</li>
+<li>headタグは、Webページの名前や文字の種類の情報を記述することができて、<br>
+bodyタグは、実際にWebページに表示する情報を記述することができる。</li>
+</ul>
+</div>
+<a href="https://script.google.com/a/macros/sit-kashiwa.com/s/AKfycbxDhfeBAWa-qGeR1UjxXxZLwW_dczfPdyHR4h2jW8-uJ_R1LpBbDaOSH5adNZuL3XPrvw/exec">Go To Home</a>
+</div><!--utigawanotyousei-->
+</div><!--sotonowakusen-->
+</body>
+</html>
+
+<style>
+html {
+scroll-behavior:smooth;
+}
+body {
+background:#eeeeee;/*「全体の」背景色を灰色に*/
+font-family:Meiryo;/*フォントを「メイリオ」に*/
+}
+div#sotonowakusen {
+background:#ffffff;/*「Body」の中の背景色を白に*/
+width:850px;/*横幅を900pxに*/
+padding:5px;/*テキスト全体の「上」からの位置を5pxに*/
+text-align:left;/*テキスト全体を左に寄せる*/
+margin:130px 60px;/*テキスト全体を上から40px、左から60pxの位置に持っていく*/
+}
+div#utigawanotyousei {
+margin:0px 10px;
+}
+div#title1 {
+background:#cccccc;
+}
+div#title2 {
+background:#cccccc;
+margin-left:30px;
+height:50px;
+display:flex;
+align-items:center;
+}
+div#mienaiwakusen {
+margin:0px 15px;
+line-height:50px;
+}
+div#mienaiwakusen2 {
+margin:0px 15px;
+}
+p#linkyou {
+color:#2c7cff;
+}
+div#itibannsaisyo {
+margin:35px 0px;
+}
+div#syasinn {
+margin:0px 10px;
+}
+div#minititle1 {
+background:#eeeeee;
+}
+div#minititle2 { 
+background:#eeeeee;
+margin:0px 30px;
+height:50px;
+display:flex;
+align-items:center;
+}
+pre {
+background:black;
+width:275px;
+font-size:14px;
+border-radius:5px;
+color:white;
+padding:0px;
+line-height:30px;
+}
+div#code {
+overflow-x:auto;
+margin:0px 10px;
+padding-top:5px;
+padding-bottom:5px;
+}
+div#code2 {
+overflow-x:auto;
+margin:0px 10px;
+padding:10px;
+}
+input#beforecode {
+background:#555555;
+margin:5px 0px 0px 5px;
+color:white;
+}
+div#kuro {
+color:black;
+}
+div#aka {
+color:red;
+}
+div#haiiro {
+color:#777777;
+}
+a#syasinn {
+color:black;
+}
+div#bigtitle {
+margin:0px 15px;
+}
+a:link#linksitei {
+color:#2c7cff;
+transition:0.25s;
+}
+a:visited#linksitei {
+color:#2c7cff;
+}
+a:hover#linksitei {
+color:#a4c6ff;
+}
+a:active#linksitei {
+color:#FF6928;
+}
+span#aka {
+color:#FF0461;
+}
+span#midori {
+color:#adff2f;
+}
+span#kiiro {
+color:#ffff77;
+}
+span#haiiro {
+color:#777777;
+}
+table#sousyoku {
+border-collapse:collapse;
+}
+table th#sousyoku,table td#sousyoku {
+border:2px #aaaaaa solid;
+padding:7px 20px;
+text-align:center;
+}
+table th#sousyoku {
+background:#eeeeee;
+}
+a#topbutton {
+width:50px;
+height:50px;
+position:fixed;
+right:0;
+bottom:0;
+background:#8EB8FF;
+font-size:25px;
+text-decoration:none;
+text-align:center;
+line-height:50px;
+color:white;
+transition:0.2s;
+}
+a#topbutton:hover {
+opacity:0.7;
+}
+a.anchor {
+display:block;
+padding-top:100px;
+margin-top:-100px;
+}
+header {
+position:fixed;
+height:80px;
+width:100%;
+opacity:0.95;
+top:0px;
+left:0px;
+display:flex;
+background:white;
+border:2px #dddddd solid;
+font-family:cursive;
+}
+nav {
+align-items:center;
+line-height:30px;
+margin:0 0 0 auto;
+}
+ul.stylen {
+list-style:none;
+font-size:25px;
+margin-right:30px;
+}
+ul.dis {
+display:flex;
+}
+li.disp {
+margin-right:30px;
+}
+div.toptitle {
+font-size:35px;
+height:80px;
+width:200px;
+display:flex;
+align-items:center;
+line-height:30px;
+margin:0px 60px;
+}
+a.colorblack {
+color:black;
+text-decoration:none;
+}
+</style>

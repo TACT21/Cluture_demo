@@ -1,0 +1,22 @@
+#header{
+    width: 100vw;
+}
+
+label{
+    color: white;
+}
+
+input{
+    display: none;
+}
+
+/*
+video{
+    width: 100vw;
+    height: 100vh;
+}
+*/
+
+
+/*#F34A4A: アクセントカラー、#fff::after*/
+body{ margin: 0;padding: 0; background:#223a70;}

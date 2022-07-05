@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="Stylesheet" href="./index.css">
+        <meta charset="UTF-8">
+        <script>
+            function SetMovieDPI(){
+                var movie_width_num = document.documentElement.clientWidth;
+                var movie_height_num = document.documentElement.clientHeight;
+                var movie_width = movie_width_num.toString() + 'px';
+                var movie_height = movie_height_num.toString() + 'px';
+                // alert(movie_width + ":" + movie_height);
+                var Movie_File = document.getElementsByClassName("MovieFile");
+                var Movie_File_Array = Array.from(Movie_File);
+                // document.getElementsByClassName("MovieFile")[0].style.width = '10px';
+                Movie_File_Array.forEach(function(e) {
+                    e.style.width = movie_width
+                    e.style.height = movie_height;
+                });
+            }
+
+            function HidingButton(){
+                var Button_Element = document.getElementsByClassName("ButtonToChangeMovie");
+                var Button_Element_Array = Array.from(Button_Element);
+                Button_Element_Array.forEach(function(e) {
+                    e.style.display = "none";
+                });
+            }
+            
+            function Chenge(a){
+                document.getElementById("game").src = document.getElementById(a).value;
+            }
+        </script>
+    </head>
+    <body onload="SetMovieDPI();HidingButton()">
+        <!-- ヘッダー -->
+        <iframe id="header" frameborder="0" src="./header.html"></iframe>
+        <!-- メイン -->
+        <main>
+            <!-- サンプル
+            <video src="video/1.mp4" controls>
+                <p>動画を再生するにはvideoタグをサポートしたブラウザが必要です。</p>
+                </video>
+            <div class="menu">
+                <input type="button" value="video/1.mp4" id="1" onclick="Chenge(1)"><label for="1">Video name 1 作者: Autor</label>
+            </div>
+            -->
+            <!-- 石丸氏 -->
+            <video src="video/Ishimaru/まとめ.mp4" class="MovieFile" id="game" controls>
+                <p>動画を再生するにはvideoタグをサポートしたブラウザが必要です。</p>
+                </video>
+            <div class="menu">
+                <center>
+                <table border="1">
+                    <tr>
+                        <td>
+                            <input type="button" value="video/Ishimaru/まとめ.mp4" id="1" onclick="Chenge(1)" class="ButtonToChangeMovie">
+                            <label for="1">まとめ.mp4　作者: 石丸さん　　</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="video/Nakamura/提出用.mp4" id="2" onclick="Chenge(2)" class="ButtonToChangeMovie">
+                            <label for="2">提出用.mp4　作者: 中村さん　　</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="video/AppleKobayashi/コン文化祭.mp4" id="3" onclick="Chenge(3)" class="ButtonToChangeMovie">
+                            <label for="3">コン文化祭.mp4　作者: 小林さん</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="video/AppleKobayashi/コン文化祭.mp4" id="4" onclick="Chenge(4)" class="ButtonToChangeMovie">
+                            <label for="4">1.mp4　作者: 浅井さん</label>
+                        </td>
+                    </tr>
+                </table>
+                </center>
+            </div>
+        </main>
+    </body>
+</html>
